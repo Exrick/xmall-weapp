@@ -1,0 +1,18 @@
+/**app.wxss**/
+@import './lib/wux-weapp/styles/index.wxss';
+
+page {
+  height: 100%;
+  background: #f4f4f4;
+}
+
+.container {
+  height: 100%;
+}
+
+.van-tag {
+  border: 1rpx solid;
+  border-color: #f0948d;
+  padding: 0.1em 0.5em !important;
+}
+

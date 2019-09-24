@@ -1,0 +1,120 @@
+/* component/coupon/coupon.wxss */
+@import '../../lib/wux-weapp/styles/index.wxss';
+
+.coupon {
+  width: 684rpx;
+  background: linear-gradient(to right, #eb7073, #f4948a);
+  border-radius: 8rpx;
+  color: #fff;
+  position: relative;
+}
+
+.coupon.disabled {
+  background: linear-gradient(to right, #b6bac3, #b8bcc3) !important;
+}
+
+.coupon .content {
+  display: flex;
+  height: 165rpx;
+  align-items: center;
+}
+
+.coupon .content .left {
+  display: flex;
+  width: 220rpx;
+  height: 90rpx;
+  justify-content: center;
+}
+
+.coupon .content .money {
+  font-size: 32px;
+}
+
+.coupon .content .unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 15rpx;
+}
+
+.coupon .content .middle {
+  display: flex;
+  flex-direction: column;
+  width: 300rpx;
+  height: 75rpx;
+  justify-content: space-around;
+}
+
+.coupon .content .middle .title {
+  font-size: 26rpx;
+}
+
+.coupon .content .middle .time {
+  font-size: 23rpx;
+}
+
+.coupon .content .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23rpx;
+  width: 130rpx;
+  height: 40rpx;
+  background: #fff;
+  color: #eb7073;
+  border-radius: 5rpx;
+}
+
+.coupon .line {
+  height: 9rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAMAAAA/FZ0KAAAADFBMVEUAAABHcEwAAAAAAACg4dfFAAAABHRSTlMTAAYOQN0UagAAAC1JREFUCNdjYMQCGKA0EzMDAzMTqiBQCASYkQWZGKCACUmQGSbIjCTIAAe4BQElpwBxVp1QRwAAAABJRU5ErkJggg==);
+  background-size: auto 9rpx;
+}
+
+.coupon .bottom {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  padding: 15rpx 30rpx;
+  background-color: rgba(0, 0, 0, 0.08);
+  border: none;
+  font-size: 24rpx;
+}
+
+.bottom .txt {
+  width: 570rpx;
+}
+
+.bottom .icon {
+  display: flex;
+  justify-content: center;
+  width: 50rpx;
+  height: 35rpx;
+  align-items: center;
+}
+
+.bottom .icon.norotate {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+.bottom .icon.rotate {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+.coupon .get {
+  width: 94rpx;
+  height: 74rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.coupon .choose {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

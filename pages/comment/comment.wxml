@@ -1,0 +1,20 @@
+<!--pages/comment/comment.wxml-->
+<view class="wrap">
+  <view class="header">
+    评价
+    <i-rate class="rate" value="{{rate}}"></i-rate>
+    {{goodCommentRate}}% 好评
+  </view>
+  <view class="tag-wrap">
+    <view class="tag {{active=='all' ? 'selected':''}}" data-value="all" bindtap="changeTag">全部({{commentList.length}})</view>
+    <view class="tag {{active=='new' ? 'selected':''}}" data-value="new" bindtap="changeTag">最新</view>
+    <view class="tag {{active=='pic' ? 'selected':''}}" data-value="pic" bindtap="changeTag">有图({{count.pic}})</view>
+    <view class="tag {{active=='add' ? 'selected':''}}" data-value="add" bindtap="changeTag">追评({{count.add}})</view>
+    <view class="tag {{active=='good' ? 'selected':''}}" data-value="good" bindtap="changeTag">好评({{count.good}})</view>
+    <view class="tag {{active=='mid' ? 'selected':''}}" data-value="mid" bindtap="changeTag">中评({{count.mid}})</view>
+    <view class="tag {{active=='bad' ? 'selected':''}}" data-value="bad" bindtap="changeTag">差评({{count.bad}})</view>
+  </view>
+  <view class="item-wrap">
+    <comment data="{{item}}" wx:for="{{comment}}" wx:key="{{index}}" class="item"></comment>
+  </view>
+</view>

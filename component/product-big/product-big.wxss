@@ -1,0 +1,53 @@
+/* component/product-big/product-big.wxss */
+
+.product-big {
+  position: relative;
+}
+
+.product-big .img {
+  width: 320rpx;
+  height: 320rpx;
+  border: 1px solid #f0f0f0;
+  border-radius: 0.2rem;
+}
+
+.product-big .img-noborder {
+  width: 320rpx;
+  height: 320rpx;
+}
+
+.product-big .name {
+  display: block;
+  padding: 5rpx 10rpx 5rpx 20rpx;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #555;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-big .description {
+  padding: 0rpx 10rpx 5rpx 20rpx;
+  display: block;
+  font-size: 20rpx;
+  color: #7f7f7f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-big .price {
+  display: block;
+  padding: 0rpx 10rpx 10rpx 20rpx;
+  font-size: 24rpx;
+  color: #d44d44;
+  font-weight: 700;
+}
+
+.product-big .tag {
+  font-weight: 700;
+  position: absolute;
+  top: 10rpx;
+  left: 15rpx;
+}

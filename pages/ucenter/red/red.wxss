@@ -1,0 +1,37 @@
+/* pages/ucenter/red/red.wxss */
+.header {
+  position: fixed;
+  top: 0;
+  width: 750rpx;
+  z-index: 10;
+}
+
+.red-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 120rpx 32rpx 20rpx 32rpx;
+}
+
+.red-wrap .item {
+  margin-bottom: 20rpx;
+  margin-right: 30rpx;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+}
+
+.empty .img {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.empty .txt {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 30rpx;
+}

@@ -1,0 +1,98 @@
+/* pages/ucenter/to-comment/to-comment.wxss */
+.wrap {
+  min-height: 300rpx;
+  background: #fff;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 15rpx 32rpx;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  height: 180rpx;
+}
+
+.product .img {
+  height: 145rpx;
+  width: 145rpx;
+  background-color: #f4f4f4;
+}
+
+.product .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100rpx;
+  margin-left: 20rpx;
+  width: 500rpx;
+}
+
+.product .title {
+  color: #555;
+  font-size: 27rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product .specDesc {
+  color: #999;
+  font-size: 25rpx;
+}
+
+.rate-wrap {
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  font-size: 27rpx;
+  color: #333;
+}
+
+.rate {
+  margin: 0 10rpx 5rpx 10rpx;
+}
+
+.input {
+  margin-left: -15px !important;
+  min-height: 180rpx;
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  color: #999;
+  font-size: 25rpx;
+}
+
+.bottom {
+  border-top: 2rpx solid #f4f4f4;
+  height: 100rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bottom .btn {
+  width: 150rpx !important;
+  height: 32px !important;
+  line-height: 30px !important;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post .time {
+  color: #999;
+  font-size: 25rpx;
+  margin-bottom: 10rpx;
+}
+
+.post .content {
+  color: #333;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}

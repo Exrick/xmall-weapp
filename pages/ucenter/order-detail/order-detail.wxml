@@ -1,0 +1,118 @@
+<!--pages/ucenter/order-detail/order-detail.wxml-->
+<!-- 顶部彩带 -->
+<view class="address-bg"></view>
+<!-- 地址 -->
+<view class="address-box" bindtap="chooseAddress">
+  <view class="l">
+    <view class="top">
+      <text class="name">{{address.name}}</text>
+      <text class="mobile">{{address.mobile}}</text>
+    </view>
+    <view class="address wux-ellipsis--l2">{{address.address + address.street}}</view>
+  </view>
+  <view class="r" wx:if="{{order.orderStatus==1}}">
+    <i-icon type="editor" size="26" color="#999" />
+  </view>
+</view>
+
+<view class="order" wx:for="{{order.productList}}" wx:key="{{product.id}}" wx:for-item="product" bindtap="toOrderDetail">
+  <view class="header">
+    <view class="order-id">包裹{{index+1}}</view>
+    <view wx:if="{{order.orderStatus==0}}" class="cancel">已取消</view>
+    <view wx:if="{{order.orderStatus==1}}" class="cancel">待付款</view>
+    <view wx:if="{{order.orderStatus==2}}" class="cancel">待发货</view>
+    <view wx:if="{{order.orderStatus==3}}" class="cancel">已发货</view>
+    <view wx:if="{{order.orderStatus==4||order.orderStatus==5}}" class="success">交易成功</view>
+  </view>
+
+  <view data-value="{{product}}" class="product" bindtap="toProduct">
+    <image class="img" src="{{product.picUrl}}"></image>
+    <view class="info">
+      <view>
+        <view class="t">
+          <text class="name">{{product.title}}</text>
+          <text class="number">x{{product.count}}</text>
+        </view>
+        <view class="m">{{product.specDesc}}</view>
+      </view>
+      <view class="prices">
+        <view class="b">￥{{product.price}}</view>
+        <view class="originPrice" wx:if="{{item.originPrice}}">￥{{product.originPrice}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="foot" wx:if="{{order.orderStatus != 0&&order.orderStatus != 1&&order.orderStatus != 2}}">
+    <view></view>
+    <view class="btns">
+      <van-button data-value="{{order}}" data-index="{{index}}" wx:if="{{order.orderStatus==3}}" plain type="default" size="small" class="btn" bindtap="toExpress">追踪物流</van-button>
+      <van-button data-value="{{order}}" data-index="{{index}}" wx:if="{{order.orderStatus==3}}" plain type="default" size="small" class="btn" bindtap="confirmReceive">确认收货</van-button>
+      <van-button data-value="{{order}}" data-index="{{index}}" wx:if="{{order.orderStatus==0||order.orderStatus==4||order.orderStatus==5}}" plain type="default" size="small" class="btn" bindtap="buyAgain">再次购买</van-button>
+      <van-button data-value="{{order}}" data-index="{{index}}" wx:if="{{order.orderStatus==4}}" plain type="default" size="small" class="btn" bindtap="toComment">立即评价</van-button>
+    </view>
+  </view>
+</view>
+
+<view class="price-detail">
+  <view class="wrap">
+    <view class="key">订单编号：</view>
+    <view class="value">{{order.orderSn}}</view>
+  </view>
+  <view class="wrap">
+    <view class="key">下单时间：</view>
+    <view class="value">{{order.createTime}}</view>
+  </view>
+</view>
+
+<view class="price-detail">
+  <view class="wrap">
+    <view class="key">支付方式：</view>
+    <view class="value">{{order.payType}}</view>
+  </view>
+  <view class="wrap">
+    <view class="key">商品金额：</view>
+    <view class="value">￥{{order.totalPrice}}</view>
+  </view>
+  <view class="wrap">
+    <view class="key">运费：</view>
+    <view class="value">￥{{order.expressPrice}}</view>
+  </view>
+  <view class="wrap red-wrap">
+    <view class="key red" wx:if="{{order.orderStatus<=1}}">应付合计：</view>
+    <view class="key red" wx:if="{{order.orderStatus>=2}}">实付：</view>
+    <view class="value red">￥{{order.actualPrice}}</view>
+  </view>
+</view>
+
+<view class="service">
+  <view class="title">
+    <view class="key">服务时间：</view>
+    <view class="value">8:00 - 24:00</view>
+  </view>
+  <view class="wrap">
+    <van-button open-type="contact" custom-class="sbtn" icon="service-o" size="small">在线客服</van-button>
+    <van-button custom-class="sbtn" icon="phone-circle-o" size="small" bindtap="toCall">电话客服
+    </van-button>
+  </view>
+
+</view>
+
+<!-- 推荐列表 -->
+<recommend></recommend>
+
+<view style="height:30rpx;"></view>
+
+<!-- 底部按钮 -->
+<view class="bottom">
+  <text wx:if="{{order.orderStatus==1}}" class="pay">应付：￥{{order.actualPrice}}</text>
+  <view wx:if="{{order.orderStatus!=1}}"></view>
+  <view>
+    <van-button wx:if="{{order.orderStatus==1||order.orderStatus==2||order.orderStatus==3}}" size="small" class="btn" bindtap="cancelOrder">取消订单
+    </van-button>
+    <van-button wx:if="{{order.orderStatus==1}}" color="#b4282d" size="small" class="btn" bindtap="toPay">立即付款
+    </van-button>
+    <van-button wx:if="{{order.orderStatus==0||order.orderStatus==4||order.orderStatus==5}}" size="small" class="btn" bindtap="deleteOrder">删除订单
+    </van-button>
+  </view>
+</view>
+
+<van-dialog confirm-button-color="#b4282d" id="van-dialog" />

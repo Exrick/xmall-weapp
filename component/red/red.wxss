@@ -1,0 +1,98 @@
+/* component/red/red.wxss */
+@import '../../lib/wux-weapp/styles/index.wxss';
+
+.red {
+  width: 330rpx;
+  border-radius: 10rpx;
+  background: linear-gradient(-1deg, #ec6f73 0, #f5948b 100%);
+  color: #fff;
+}
+
+.red.disabled {
+  background: linear-gradient(-1deg, #b6bac3 0, #b8bcc3 100%) !important;
+}
+
+.red .cover {
+  width: 100%;
+  height: 70rpx;
+}
+
+.red .cover .top {
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(-180deg, #f48f88 0, #f28884 100%);
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.red.disabled .cover .top {
+  background: linear-gradient(-180deg, #abafb8 0, #abafb8 100%) !important;
+}
+
+.red .cover .bottom {
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(-1deg, #f0807f 0, #f28884 98%);
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+}
+
+.red.disabled .cover .bottom {
+  background: linear-gradient(-1deg, #abafb8 0, #abafb8 98%)!important;
+}
+
+.red .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx;
+  border-bottom: dashed 1px #fff;
+  text-align: center;
+}
+
+.red .content .line1 {
+  font-size: 28rpx;
+}
+
+.red .content .line2 b {
+  font-size: 56rpx;
+}
+
+.red .content .line2 {
+  font-size: 28rpx;
+}
+
+.red .content .line3 {
+  font-size: 26rpx;
+}
+
+.red .foot {
+  position: relative;
+  padding: 20rpx 30rpx 0 30rpx;
+  font-size: 26rpx;
+  line-height: 30rpx;
+}
+
+.red .foot .icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50rpx;
+}
+
+.foot .icon.norotate {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+.foot .icon.rotate {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+.red .choose {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

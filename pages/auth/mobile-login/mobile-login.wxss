@@ -1,0 +1,58 @@
+/* pages/auth/mobile-login/mobile-login.wxss */
+
+.form-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 80rpx;
+  margin-bottom: 60rpx;
+}
+
+.input {
+  width: 650rpx;
+  margin-bottom: 30rpx;
+}
+
+.sms-input {
+  width: 400rpx !important;
+}
+
+.sms {
+  width: 650rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sms-btn {
+  background-color: #b4282d !important;
+  color: #fff !important;
+  width: 220rpx !important;
+}
+
+.error {
+  margin-top: 30rpx;
+  width: 100%;
+  font-size: 26rpx;
+  color: #b4282d;
+  margin-left: 100rpx;
+}
+
+.login-btn {
+  background-color: #b4282d !important;
+  color: #fff !important;
+  margin-top: 100rpx;
+  width: 650rpx !important;
+}
+
+.pass-login {
+  margin-top: 80rpx;
+  font-size: 26rpx;
+  color: rgb(95, 111, 149);
+}

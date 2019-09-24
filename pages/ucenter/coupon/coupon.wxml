@@ -1,0 +1,29 @@
+<!--pages/ucenter/coupon/coupon.wxml-->
+<view class="header">
+  <van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipeable bind:change="changeTab" wx:if="{{mode!='choose'}}">
+    <van-tab title="未使用"></van-tab>
+    <van-tab title="已使用"></van-tab>
+    <van-tab title="已失效"></van-tab>
+  </van-tabs>
+
+  <view class="input-wrap">
+    <van-field value="{{ value }}" clearable placeholder="请输入优惠码" bind:change="onChange" class="input-box" />
+    <van-button color="#b4282d" bind:click="submitCoupon" size="small" type="danger" disabled="{{disabled}}">兑换</van-button>
+  </view>
+</view>
+
+<scroll-view bindscrolltolower="scrollListen" scroll-y class="coupon-wrap" enable-flex wx:if="{{couponList.length>0}}">
+  <view style="margin-top:240rpx" wx:if="{{mode!='choose'}}"></view>
+  <view style="margin-top:150rpx" wx:if="{{mode=='choose'}}"></view>
+  <coupon data="{{item}}" wx:for="{{couponList}}" wx:key="{{item.id}}" data-value="{{item}}" bind:select="choose" class="item">
+  </coupon>
+</scroll-view>
+
+<view wx:if="{{couponList.length==0}}" class="empty">
+  <image src="/assets/noCoupon.png" class="img"></image>
+  <view class="txt">暂无优惠券</view>
+</view>
+
+<view class="notuse" hover-class="navigator-hover" bindtap="clearCoupon" wx:if="{{mode=='choose'}}">不使用优惠券</view>
+
+<van-toast id="van-toast" />

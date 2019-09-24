@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<view>
+  <!-- 搜索框 -->
+  <view class="search-bar">
+    <view class="search" bindtap="toSearch">
+      <image class="search-logo" src="/assets/search.png" mode="aspectFit"></image>
+      搜索喜欢的商品
+    </view>
+  </view>
+
+  <view wx:for="{{sections}}" wx:key="{{item.id}}">
+
+    <!-- 轮播图 -->
+    <view class="banner-wrap" wx:if="{{item.type==0&&item.list.length>0}}">
+      <swiper class="banner" indicator-dots="true" indicator-color="#e0e0e0" indicator-active-color="#fff" autoplay="true" interval="3000" duration="1000">
+        <swiper-item wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}">
+          <image src="{{iitem.picUrl}}" background-size="cover" mode="aspectFit" data-value="{{iitem}}" bindtap="handleClick"></image>
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <!-- 快捷频道图标 -->
+    <view class="menu" wx:if="{{item.type==1&&item.list.length>0}}">
+      <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">
+        <image src="{{iitem.picUrl}}" background-size="cover" data-value="{{iitem}}"></image>
+        <text>{{iitem.title}}</text>
+      </view>
+    </view>
+
+    <!-- 热门板块 -->
+    <view class="section hot" wx:if="{{item.type==2&&item.list.length>0}}">
+      <view class="h" data-value="{{item}}" hover-class="active" bindtap="clickHeader">
+        <text class="txt">{{item.title}}</text>
+        <image class="arrow" src="/assets/rightArrow.png"></image>
+      </view>
+      <scroll-view scroll-x>
+        <view class="hot-wrap">
+          <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">
+            <product-hot data="{{iitem}}"></product-hot>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+    <!-- 两张长图板块 -->
+    <view class="section layout-two" wx:if="{{item.type==3&&item.list.length>0}}">
+      <view class="layout-image-two" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="iitem.id" data-value="{{iitem}}" bindtap="handleClick">
+        <image class="layout-image-two" src="{{iitem.picUrl}}" mode="aspectFit"></image>
+      </view>
+    </view>
+
+    <!-- 大图带边框板块 -->
+    <view class="section pick" wx:if="{{item.type==4&&item.list.length>0}}">
+      <view class="h" data-value="{{item}}" hover-class="active" bindtap="clickHeader">
+        <text class="txt">{{item.title}}</text>
+        <image class="arrow" src="/assets/rightArrow.png"></image>
+      </view>
+      <view class="pick-wrap">
+        <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">
+          <product-big data="{{iitem}}"></product-big>
+        </view>
+      </view>
+    </view>
+
+    <!-- 大图无边框板块 -->
+    <view class="section pick" wx:if="{{item.type==5&&item.list.length>0}}">
+      <view class="h" data-value="{{item}}" hover-class="active" bindtap="clickHeader">
+        <text class="txt">{{item.title}}</text>
+        <image class="arrow" src="/assets/rightArrow.png"></image>
+      </view>
+      <view class="pick-wrap">
+        <view class="item" wx:for="{{item.list}}" wx:for-item="iitem" wx:key="{{iitem.id}}" data-value="{{iitem}}" bindtap="handleClick">
+          <product-big data="{{iitem}}" border="false"></product-big>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="more">
+    <text class="title">—— 更多内容,敬请期待 ——</text>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/address/index/index.wxml-->
+<!-- 空 -->
+<view class="no-address" wx:if="{{addressList.length == 0}}">
+  <view class="wrap">
+    <image class="image" src="/assets/noAddress.png"></image>
+    <view class="txt">收货地址在哪里</view>
+  </view>
+</view>
+
+<!-- 地址列表 -->
+<view class="address" wx:if="{{addressList.length > 0}}">
+  <!-- 顶部彩带 -->
+  <view class="address-bg"></view>
+  <!-- 列表 -->
+  <i-swipeout i-class="swipeout" operateWidth="{{70}}" wx:for="{{addressList}}" wx:for-item="item" wx:key="{{item.id}}">
+    <view slot="content" class="item {{item.checked ? 'checked' : ''}}">
+      <view class="left" data-value="{{item}}" bindtap="chooseAddress">
+        <view class="name">{{item.name}}</view>
+        <van-tag color="#b4282d" plain wx:if="{{item.isDefault}}">默认</van-tag>
+      </view>
+      <view class="middle" data-value="{{item}}" bindtap="chooseAddress">
+        <view class="mobile">{{item.mobile}}</view>
+        <view class="desc wux-ellipsis--l2">{{item.address + item.street}}</view>
+      </view>
+      <view class="edit" data-value="{{item}}" bindtap="editAddress">
+        <i-icon type="editor" size="26" color="#999" />
+      </view>
+    </view>
+    <view slot="button" class="delete" data-value="{{item}}" bindtap="deleteAddress">
+      <image src="/assets/deleteWhite.png" class="image"></image>
+    </view>
+  </i-swipeout>
+</view>
+
+<!-- 底部按钮 -->
+<view class="bottom">
+  <view class="add-btn" hover-class="navigator-hover" bindtap="addAddress">
+    <van-icon name="plus" class="icon" />新建地址</view>
+  <view class="import-btn" hover-class="navigator-hover" bindtap="importAddress">
+    <image src="/assets/wechat.png" class="image"></image>一键导入微信地址</view>
+</view>

@@ -1,0 +1,26 @@
+<!--component/red/red.wxml-->
+<view class="red {{data.disabled ? 'disabled':''}}">
+  <view class="cover">
+    <view class="top"></view>
+    <view class="bottom"></view>
+  </view>
+  <view class="content">
+    <view class="line1">{{data.title}}</view>
+    <view class="line2">
+      <b>{{data.money}}</b>
+      <span>元</span>
+    </view>
+    <view class="line3">
+      <span>{{data.startTime}}</span>
+      <span>-</span>
+      <span>{{data.endTime}}</span>
+    </view>
+  </view>
+  <view class="foot">
+    <view class="word {{data.showAll ? '':'wux-ellipsis--l2'}}">{{data.description}}</view>
+    <view class="icon-wrap" bindtap="changeShowDesc">
+      <van-icon name="arrow-down" class="icon {{data.showAll ? 'norotate':'rotate'}}" />
+    </view>
+  </view>
+  <image wx:if="{{data.selected}}" src="/assets/choosed.png" class="choose"></image>
+</view>

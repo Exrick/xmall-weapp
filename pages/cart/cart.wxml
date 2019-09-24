@@ -1,0 +1,90 @@
+<!--pages/cart/cart.wxml-->
+<view>
+  <!-- header -->
+  <view class="service-policy" wx:if="{{noChecked||!isLogin}}">
+    <view class="item">
+      <image class="red-point" src="/assets/redPoint.png"></image>30天无忧退货</view>
+    <view class="item">
+      <image class="red-point" src="/assets/redPoint.png"></image>48小时快速退款</view>
+    <view class="item">
+      <image class="red-point" src="/assets/redPoint.png"></image>满88元免邮费</view>
+  </view>
+  <!-- 包邮显示 -->
+  <view class="notice" wx:if="{{!noChecked&&isLogin}}">
+    <text wx:if="{{isExpressFree}}">已满足包邮条件</text>
+    <text wx:if="{{!isExpressFree}}">再购￥{{restExpressFree}}元可免邮费</text>
+    <view class="right" bindtap="toBuyOther" wx:if="{{!isExpressFree}}">
+      <text>去凑单</text>
+      <van-icon class="arrow" color="#f48f18" name="arrow" />
+    </view>
+  </view>
+  <!-- 加价购 -->
+  <view class="promotion" wx:if="{{cartList.length>0&&isLogin}}">
+    <view class="left" wx:if="{{isPromotion}}">
+      <view class="tag">全场加价购</view>
+      <text>已满足满130元可超值换购</text>
+    </view>
+    <view class="right" bindtap="toChangeOther" wx:if="{{isPromotion}}">
+      <text>去换购</text>
+      <van-icon class="arrow" color="#f48f18" name="arrow" />
+    </view>
+    <view class="left" wx:if="{{!isPromotion}}">
+      <view class="tag">全场加价购</view>
+      <text>再购￥{{restPromotion}}元立享满130元可超值换购</text>
+    </view>
+    <view class="right" bindtap="toBuyOther" wx:if="{{!isPromotion}}">
+      <text>去凑单</text>
+      <van-icon class="arrow" color="#b4282d" name="arrow" />
+    </view>
+  </view>
+  <!-- 空 -->
+  <view class="{{isLogin ? 'no-cart-small' : 'no-cart'}}" wx:if="{{!isLogin||cartList.length==0}}">
+    <view class="add">
+      <image class="image" src="/assets/emptyCart.png" />
+      <text class="txt">去添加点什么吧</text>
+    </view>
+  </view>
+  <!-- 未登录 -->
+  <view class="login-wrap" wx:if="{{!isLogin}}">
+    <navigator url="../auth/tologin/tologin" class="login">登录</navigator>
+  </view>
+  <!-- 购物车列表 -->
+  <view class="cart-wrap" wx:if="{{cartList.length > 0 && isLogin}}">
+    <i-swipeout i-class="item" operateWidth="{{70}}" wx:for="{{cartList}}" wx:for-item="item" wx:key="{{item.id}}">
+      <view slot="content" class="product">
+        <van-checkbox data-value="{{item}}" data-index="{{index}}" class="check" value="{{ item.checked }}" checked-color="#b4282d" bind:change="changeCheck">
+        </van-checkbox>
+        <image data-value="{{item}}" class="image" src="{{item.picUrl}}" bindtap="toProduct"></image>
+        <view class="info">
+          <view class="top">
+            <text class="title" data-value="{{item}}" bindtap="toProduct">{{item.title}}</text>
+            <view class="spec">{{item.spec}}
+              <van-icon class="arrow" color="#7F7F7F" name="arrow-down" />
+            </view>
+          </view>
+          <view class="bottom">
+            <text class="price">￥{{item.price}}</text>
+            <text class="origin" wx:if="{{item.originPrice}}">￥{{item.originPrice}}</text>
+            <i-input-number data-value="{{item}}" data-index="{{index}}" value="{{ item.count }}" min="1" max="{{item.maxNum}}" bindchange="changeCount" />
+          </view>
+        </view>
+      </view>
+      <view slot="button" class="delete" data-value="{{item}}" bindtap="deleteProduct">
+        删除
+      </view>
+    </i-swipeout>
+    <!-- 底部统计下单 -->
+    <view class="cart-bottom">
+      <van-checkbox class="left" label-class="checked-all" value="{{ checkedAll }}" checked-color="#b4282d" bind:change="changeCheckedAll">
+        <text wx:if="{{noChecked}}">全选</text>
+        <text wx:if="{{!noChecked}}">已选( {{totalCount}} )</text>
+      </van-checkbox>
+      <view class="right">
+        <view class="total">合计: ￥{{totalPrice}}</view>
+        <view class="checkout {{noChecked ? 'disabled' : ''}}" hover-class="{{noChecked ? '' : 'active'}}" bindtap="checkout">下单</view>
+      </view>
+    </view>
+  </view>
+  <!-- 推荐列表 -->
+  <recommend wx:if="{{isLogin}}"></recommend>
+</view>

@@ -1,0 +1,30 @@
+/* pages/auth/tologin/tologin.wxss */
+
+.form-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 200rpx;
+  margin-bottom: 100rpx;
+}
+
+.login-btn {
+  width: 650rpx;
+  background-color: #b4282d !important;
+  color: #fff !important;
+}
+
+.mlogin-btn {
+  width: 650rpx;
+  margin-top: 30rpx;
+  background-color: transparent !important;
+  color: #b4282d !important;
+  border: 1rpx solid #b4282d !important;
+}
+

@@ -1,0 +1,27 @@
+<!--pages/address/edit/edit.wxml-->
+<van-cell-group>
+  <van-field value="{{ form.name }}" placeholder="姓名" size="large" bind:change="onChangeName" clearable />
+  <van-field value="{{ form.mobile }}" placeholder="手机号码" size="large" bind:change="onChangeMobile" clearable />
+  <van-field value="{{ form.address }}" readonly placeholder="省份、城市、区县" size="large" bindtap="showSelectAddress" clearable />
+  <van-field value="{{ form.street }}" placeholder="详细地址，如楼道、楼盘号等" size="large" bind:change="onChangeStreet" clearable />
+</van-cell-group>
+
+<view class="default">
+  <van-checkbox class="left" label-class="checked" value="{{ form.isDefault }}" checked-color="#b4282d" bind:change="changeDefault">
+    设为默认地址
+  </van-checkbox>
+  <view class="import" bindtap="importAddress">
+    <image src="/assets/wechat.png" class="image"></image>一键导入微信地址
+    <van-icon name="arrow" color="#07c160" class="icon" />
+  </view>
+</view>
+
+<!-- 底部保存按钮 -->
+<button class="save" hover-class="active" bindtap="saveAddress">保存</button>
+
+<!-- 地址选择 -->
+<van-popup show="{{ show }}" position="bottom">
+  <van-area area-list="{{ areaList }}" bind:cancel="cancelSelect" bind:confirm="selectArea"/>
+</van-popup>
+
+<van-toast id="van-toast" />

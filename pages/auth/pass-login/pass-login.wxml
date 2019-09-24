@@ -1,0 +1,10 @@
+<!--pages/auth/pass-login/pass-login.wxml-->
+<view class="form-box">
+  <image src="/assets/m.png" class="logo"></image>
+  <van-field focus="true" type="number" label="+86" title-width="80rpx" maxlength="11" placeholder="请输入手机号" clearable bind:change="onChangeMobile" class="input" />
+  <van-field label="密码" title-width="80rpx" clearable placeholder="请输入密码" maxlength="6" bind:change="onChangePass" class="pass-input">
+  </van-field>
+  <text class="error">{{errorMsg}}</text>
+  <van-button disabled="{{loading}}" loading="{{loading}}" loading-text="登录中" custom-class="login-btn" bind:click="login">登录</van-button>
+  <text class="mobile-login" bindtap="mobileLogin">短信快捷登录</text>
+</view>

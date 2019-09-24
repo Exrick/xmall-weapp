@@ -1,0 +1,151 @@
+/* pages/address/index/index.wxss */
+
+page {
+  background: #fff;
+}
+
+.no-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.no-address .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-address .image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-bottom: 30rpx;
+}
+
+.no-address .txt {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.address-bg {
+  display: block;
+  width: 100%;
+  height: 11rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAKCAMAAADfAc3wAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURc2AgICg1v///+rw+ffq6tKMjI2p2ouo2QT3I5MAAAA9SURBVCjPpcs5EgAgCARB5ND//9jEYwlZJp1q0ZTNAS3L10OgcGlYlYZNuGoRly3guv2YsA8z9mLKHsxZ3e5sBBsNqhCTAAAAAElFTkSuQmCC) repeat-x;
+  background-size: auto 10rpx;
+}
+
+.swipeout {
+  border-bottom: none !important;
+}
+
+.address .item {
+  min-height: 155rpx;
+  align-items: center;
+  display: flex;
+  padding-left: 32rpx;
+  border-bottom: 1rpx solid #dcd9d9;
+}
+
+.address .item.checked {
+  border-left: 2px solid #b4282d;
+}
+
+.address .left {
+  display: flex;
+  width: 125rpx;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.address .name {
+  height: 45rpx;
+  font-size: 29rpx;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.address .middle {
+  width: 525rpx;
+}
+
+.address .mobile {
+  font-size: 29rpx;
+  line-height: 29rpx;
+  overflow: hidden;
+  color: #333;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.address .desc {
+  font-size: 25rpx;
+  color: #999;
+  white-space: normal !important;
+}
+
+.address .edit {
+  padding: 35rpx 25rpx 35rpx 20rpx;
+}
+
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e83a3a;
+  height: 155rpx;
+}
+
+.delete .image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.bottom {
+  width: 750rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20rpx;
+  padding-bottom: 30rpx;
+  background: #fff;
+}
+
+.add-btn {
+  color: #b4282d;
+  border: 1rpx solid #b4282d;
+  border-radius: 5rpx;
+  font-size: 26rpx;
+  width: 330rpx;
+  height: 75rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+}
+
+.import-btn {
+  color: #07c160;
+  border: 1rpx solid #07c160;
+  border-radius: 5rpx;
+  font-size: 26rpx;
+  width: 330rpx;
+  height: 75rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.import-btn .image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}

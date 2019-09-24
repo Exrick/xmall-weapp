@@ -1,0 +1,9 @@
+<!--component/recommend/recommend.wxml-->
+<view class="recommend">
+  <view class="guess-txt">猜你喜欢</view>
+  <view class="recommend-wrap">
+    <view class="item" wx:for="{{recommend}}" wx:for-item="item" wx:key="{{item.id}}" data-value="{{item}}" bindtap="handleClick">
+      <product-big data="{{item}}" border="false"></product-big>
+    </view>
+  </view>
+</view>

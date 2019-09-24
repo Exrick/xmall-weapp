@@ -1,0 +1,25 @@
+/* component/recommend/recommend.wxss */
+.recommend {
+  background: #fff;
+}
+
+.guess-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.recommend-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15rpx 130rpx 40rpx;
+}
+
+.recommend .item {
+  width: 320rpx;
+  margin-top: 25rpx;
+  margin-right: 25rpx;
+}

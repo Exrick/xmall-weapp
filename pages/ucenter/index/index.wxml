@@ -1,0 +1,139 @@
+<!--pages/ucenter/index/index.wxml-->
+<view class="ucenter">
+  <view class="profile-info" bindtap="toLogin">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="info">
+      <text class="name">{{userInfo.nickName}}</text>
+      <text class="level">{{userInfo.username}}</text>
+    </view>
+    <view class="vip" wx:if="{{isLogin}}" animation="{{ani}}" bindtap="toVip">
+      <image src="/assets/vip.png" class="img" />
+      <view class="word">
+        <view class="line1">超级会员</view>
+        <view class="line2">
+          立即试用
+          <van-icon name="arrow" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-wrap">
+    <view class="order-header">
+      <text class="txt">我的订单</text>
+      <view class="right" id="0" bindtap="toOrder">
+        <text class="all">查看全部</text>
+        <image class="arrow" src="/assets/rightArrow.png"></image>
+      </view>
+    </view>
+    <view class="order-icon">
+      <view class="icon-wrap" id="1" bindtap="toOrder">
+        <i-badge count="{{order.pay}}">
+          <image class="icon" src="/assets/pay.png"></image>
+        </i-badge>
+        <text class="txt">待付款</text>
+      </view>
+      <view class="icon-wrap" id="2" bindtap="toOrder">
+        <i-badge count="{{order.toSend}}">
+          <image class="icon" src="/assets/toSend.png"></image>
+        </i-badge>
+        <text class="txt">待发货</text>
+      </view>
+      <view class="icon-wrap" id="3" bindtap="toOrder">
+        <i-badge count="{{order.send}}">
+          <image class="icon" src="/assets/send.png"></image>
+        </i-badge>
+        <text class="txt">已发货</text>
+      </view>
+      <view class="icon-wrap" id="4" bindtap="toOrder">
+        <i-badge count="{{order.comment}}">
+          <image class="icon" src="/assets/comment.png"></image>
+        </i-badge>
+        <text class="txt">待评价</text>
+      </view>
+      <view class="icon-wrap">
+        <i-badge count="{{order.afterSale}}">
+          <image class="icon" src="/assets/afterSale.png"></image>
+        </i-badge>
+        <text class="txt">退换/售后</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-wrap">
+    <view class="order-header">
+      <text class="txt">我的资产</text>
+    </view>
+    <view class="order-icon">
+      <view class="icon-wrap" bindtap="toCoupon">
+        <text class="num">{{wallet.coupon}}</text>
+        <text class="txt">优惠券</text>
+      </view>
+      <view class="icon-wrap">
+        <text class="num">{{wallet.point}}</text>
+        <text class="txt">积分</text>
+      </view>
+      <view class="icon-wrap" bindtap="toRed">
+        <text class="num">{{wallet.red}}</text>
+        <text class="txt">红包</text>
+      </view>
+      <view class="icon-wrap">
+        <text class="num">{{wallet.allowance}}</text>
+        <text class="txt">津贴</text>
+      </view>
+      <view class="icon-wrap">
+        <text class="num">{{wallet.gift}}</text>
+        <text class="txt">礼品卡</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="service-wrap">
+    <view class="order-header">
+      <text class="txt">我的服务</text>
+    </view>
+    <view class="order-icon">
+      <view class="icon-wrap">
+        <image class="icon" src="/assets/group.png"></image>
+        <text class="txt">拼团订单</text>
+      </view>
+      <view class="icon-wrap">
+        <image class="icon" src="/assets/coupon.png"></image>
+        <text class="txt">领劵中心</text>
+      </view>
+      <view class="icon-wrap">
+        <image class="icon" src="/assets/sign.png"></image>
+        <text class="txt">签到领钱</text>
+      </view>
+      <view class="icon-wrap" bindtap="toAddress">
+        <image class="icon" src="/assets/address.png"></image>
+        <text class="txt">地址管理</text>
+      </view>
+    </view>
+    <view class="order-icon">
+      <view class="icon-wrap">
+        <button open-type="contact" hover-class="none" class="wxbtn">
+          <image class="icon wx" src="/assets/service.png"></image>
+          <text class="txt">联系客服</text>
+        </button>
+      </view>
+      <view class="icon-wrap">
+        <image class="icon" src="/assets/help.png"></image>
+        <text class="txt">帮助中心</text>
+      </view>
+      <view class="icon-wrap">
+        <button open-type="feedback" hover-class="none" class="wxbtn">
+          <image class="icon wx" src="/assets/feedback.png"></image>
+          <text class="txt">用户反馈</text>
+        </button>
+      </view>
+      <view class="icon-wrap" bindtap="toSetting">
+        <image class="icon" src="/assets/setting.png"></image>
+        <text class="txt">设置</text>
+      </view>
+    </view>
+
+  </view>
+
+  <navigator url="../../auth/tologin/tologin" class="logout" wx:if="{{isLogin}}">切换账号</navigator>
+</view>

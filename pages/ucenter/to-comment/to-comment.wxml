@@ -1,0 +1,31 @@
+<!--pages/ucenter/to-comment/to-comment.wxml-->
+<view class="wrap" wx:for="{{order.productList}}" wx:key="{{index}}">
+  <view class="product">
+    <image class="img" src="{{item.picUrl}}"></image>
+    <view class="info">
+      <text class="title">{{item.title}}</text>
+      <text class="specDesc">{{item.specDesc}}</text>
+    </view>
+  </view>
+  <view class="rate-wrap">
+    评分
+    <i-rate class="rate" value="{{item.rate}}" data-index="{{index}}" bind:change="changeRate"></i-rate>
+    {{item.rateTxt}}
+  </view>
+  <view wx:if="{{item.commentStatus==0}}" class="post">
+    <van-field value="{{ item.comment }}" data-index="{{index}}" bind:change="changeInput" type="textarea" placeholder="填写高质量的评价，即可参与抽奖哦~" autosize border="{{ false }}" class="input" />
+    <wux-upload listType="picture-card" max="5" url="https://www.skyvow.cn/api/common/file" bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview">
+      <view class="upload">
+        <van-icon name="photo-o" size="23px" color="#999" />上传图片</view>
+    </wux-upload>
+    <view class="bottom">
+      <van-button data-index="{{index}}" size="small" custom-class="btn" bindtap="post">提交</van-button>
+    </view>
+  </view>
+  <view wx:if="{{item.commentStatus==1}}" class="post">
+    <view class="time">{{item.commentTime}}</view>
+    <view class="content">{{item.comment}}</view>
+  </view>
+</view>
+
+<van-toast id="van-toast" />

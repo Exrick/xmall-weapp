@@ -1,0 +1,57 @@
+<!--pages/checkout/checkout.wxml-->
+<!-- 顶部彩带 -->
+<view class="address-bg"></view>
+<!-- 地址 -->
+<view class="address-box" bindtap="chooseAddress">
+  <view class="l">
+    <text class="name">{{address.name}}</text>
+    <van-tag color="#b4282d" plain wx:if="{{address.isDefault}}">默认</van-tag>
+  </view>
+  <view class="m">
+    <text class="mobile">{{address.mobile}}</text>
+    <text class="address wux-ellipsis--l3">{{address.address + address.street}}</text>
+  </view>
+  <view class="r">
+    <image src="/assets/rightArrow.png"></image>
+  </view>
+</view>
+
+<!-- 订单信息 -->
+<van-cell-group class="order-box">
+  <van-cell custom-class="cell" title="优惠券：{{coupon.id ?  coupon.title : '未选择' }}" value="{{couponCount}} 张" is-link bindtap="chooseCoupon"/>
+  <van-cell title="商品合计" value="￥{{totalPrice}}" />
+  <van-cell title="运费" value="￥{{expressPrice}}" />
+  <van-cell title="优惠券" value="-￥{{coupon.discount}}" wx:if="{{coupon.id}}" />
+</van-cell-group>
+
+<view class="product">
+  <view class="item" wx:for="{{productList}}" wx:key="{{item.id}}">
+    <view class="img">
+      <image src="{{item.picUrl}}"></image>
+    </view>
+    <view class="info">
+      <view>
+        <view class="t">
+          <text class="name">{{item.title}}</text>
+          <text class="number">x{{item.count}}</text>
+        </view>
+        <view class="m">{{item.spec}}</view>
+      </view>
+      <view class="prices">
+        <view class="b">￥{{item.price}}</view>
+        <view class="originPrice" wx:if="{{item.originPrice}}">￥{{item.originPrice}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<van-checkbox class="agreement" label-class="checked" value="{{ agree }}" checked-color="#b4282d" bind:change="changeAgree">
+  我同意《平台服务协议》
+</van-checkbox>
+
+<view class="bottom">
+  <view class="l">实付: ￥{{actualPrice}}</view>
+  <view class="r {{agree ? '' : 'disabled'}}" hover-class="{{agree ? 'active' : ''}}" bindtap="submitOrder">去付款</view>
+</view>
+
+<van-toast id="van-toast" />

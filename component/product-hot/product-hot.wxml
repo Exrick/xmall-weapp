@@ -1,0 +1,10 @@
+<!--component/product-hot/product-hot.wxml-->
+<view class="product-hot">
+  <image class="img" src="{{data.picUrl}}" mode="aspectFit"></image>
+  <van-tag wx:if="{{data.tag}}" round color="#ffe7e5" text-color="#cc3e39" class="tag">{{data.tag}}</van-tag>
+  <view class="mt">
+    <text class="brand">{{data.title}}</text>
+    <text class="description">{{data.description}}</text>
+    <text class="price">￥{{data.price}}</text>
+  </view>
+</view>

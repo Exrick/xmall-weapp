@@ -1,0 +1,14 @@
+<!--pages/auth/mobile-login/mobile-login.wxml-->
+<view class="form-box">
+  <image src="/assets/m.png" class="logo"></image>
+  <van-field focus="true" type="number" label="+86" title-width="80rpx" maxlength="11" placeholder="请输入手机号" clearable bind:change="onChangeMobile" class="input" />
+  <view class="sms">
+    <van-field type="number" clearable placeholder="请输入短信验证码" maxlength="6" bind:change="onChangeCode" class="sms-input">
+    </van-field>
+    <van-button disabled="{{sended}}" loading="{{loading}}" loading-text="发送中" custom-class="sms-btn" bind:click="sendCode">{{getSms}}</van-button>
+  </view>
+  <text class="error">{{errorMsg}}</text>
+  <van-button disabled="{{loginLoading}}" loading="{{loginLoading}}" loading-text="登录中" custom-class="login-btn" bind:click="login">登录</van-button>
+  <text class="pass-login" bindtap="passLogin">密码登录</text>
+</view>
+<wux-toptips id="wux-toptips" />

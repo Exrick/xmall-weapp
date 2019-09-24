@@ -1,0 +1,22 @@
+<!--component/coupon/coupon.wxml-->
+<view class="coupon {{data.disabled ? 'disabled':''}}">
+  <view class="content" bindtap="onSelect">
+    <view class="left">
+      <text class="money">{{data.discount}}</text>
+      <view class="unit">元</view>
+    </view>
+    <view class="middle">
+      <view class="title wux-ellipsis">{{data.title}}</view>
+      <view class="time">{{data.time}}</view>
+    </view>
+    <view wx:if="{{!data.disabled&&!data.selected&&data.mode!='get'&&data.mode!='choose'}}" class="right" bindtap="toUse">去使用</view>
+    <view wx:if="{{!data.disabled&&!data.selected&&!data.get&&data.mode=='get'}}" class="right" bindtap="toGet">立即领取</view>
+  </view>
+  <view class="line"></view>
+  <view class="bottom">
+    <text class="txt {{data.showAll ? '':'wux-ellipsis'}}">{{data.description}}</text>
+    <van-icon name="arrow-down" class="icon {{data.showAll ? 'norotate':'rotate'}}" bindtap="changeShowDesc" />
+  </view>
+  <image wx:if="{{data.get}}" src="/assets/get.png" class="get"></image>
+  <image wx:if="{{data.selected}}" src="/assets/choosed.png" class="choose"></image>
+</view>

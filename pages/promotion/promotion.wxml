@@ -1,0 +1,12 @@
+<!--pages/promotion/promotion.wxml-->
+<view class="filter">
+  <wux-filterbar items="{{ filters }}" bind:change="onFilterChange" bind:open="onOpen" />
+</view>
+
+<scroll-view bindscrolltolower="scrollListen" scroll-y enable-flex class="product">
+  <view style="height:100rpx;width:750rpx"></view>
+  <view class="product-wrap">
+    <product-big data="{{item}}" border="false" class="item" wx:for="{{product}}" wx:for-item="item" wx:key="{{item.id}}" data-value="{{item}}" bindtap="handleClick">
+    </product-big>
+  </view>
+</scroll-view>

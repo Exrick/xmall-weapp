@@ -1,0 +1,248 @@
+/* pages/ucenter/order-detail/order-detail.wxss */
+
+.address-bg {
+  display: block;
+  width: 100%;
+  height: 11rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAKCAMAAADfAc3wAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURc2AgICg1v///+rw+ffq6tKMjI2p2ouo2QT3I5MAAAA9SURBVCjPpcs5EgAgCARB5ND//9jEYwlZJp1q0ZTNAS3L10OgcGlYlYZNuGoRly3guv2YsA8z9mLKHsxZ3e5sBBsNqhCTAAAAAElFTkSuQmCC) repeat-x;
+  background-size: auto 10rpx;
+}
+
+.address-box {
+  display: flex;
+  align-items: center;
+  background: #fefbee;
+  padding: 25rpx 32rpx 25rpx 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.address-box .l {
+  width: 675rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.address-box .l .name {
+  width: 125rpx;
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 50rpx;
+}
+
+.address-box .top {
+  margin-bottom: 4rpx;
+}
+
+.address-box .mobile {
+  margin-bottom: 7rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.address-box .address {
+  display: block;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.address-box .r image {
+  width: 16rpx;
+  height: 27rpx;
+}
+
+.order {
+  background: #fff;
+  padding-left: 32rpx;
+  margin-top: 20rpx;
+}
+
+.order .header {
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25rpx 0 0;
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 27rpx;
+  color: #555;
+}
+
+.header .cancel {
+  color: #b4282d;
+}
+
+.header .success {
+  color: #2bab52;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  height: 180rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.product .img {
+  height: 145rpx;
+  width: 145rpx;
+  background-color: #f4f4f4;
+  margin-right: 20rpx;
+}
+
+.product .info {
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 520rpx;
+}
+
+.product .t {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #555;
+}
+
+.product .t .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 470rpx;
+}
+
+.product .m {
+  font-size: 25rpx;
+  color: #999;
+  width: 500rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.product .prices {
+  display: flex;
+}
+
+.product .b {
+  font-size: 28rpx;
+  color: #555;
+}
+
+.product .originPrice {
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 10rpx;
+  text-decoration: line-through;
+}
+
+.product .status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100rpx;
+  width: 100rpx;
+}
+
+.foot {
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25rpx 0 0;
+  font-size: 27rpx;
+  color: #555;
+}
+
+.foot .btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  margin-left: 20rpx;
+}
+
+.price-detail {
+  margin-top: 20rpx;
+  padding: 25rpx 32rpx;
+  background: #fff;
+  font-size: 27rpx;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-detail .wrap {
+  display: flex;
+  margin-bottom: 5rpx;
+}
+
+.price-detail .key {
+  width: 150rpx;
+  color: #999;
+}
+
+.price-detail .red-wrap {
+  color: #b4282d !important;
+  border-top: 1px solid #f4f4f4;
+  padding-top: 10rpx;
+  margin-top: 15rpx;
+}
+
+.price-detail .red {
+  color: #b4282d;
+}
+
+.service {
+  margin-top: 20rpx;
+  padding: 25rpx 32rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.service .title {
+  font-size: 24rpx;
+  display: flex;
+  margin-bottom: 10rpx;
+  color: #555;
+}
+
+.service .key {
+  color: #999;
+}
+
+.service .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service .sbtn {
+  width: 330rpx !important;
+  height: 34px !important;
+  line-height: 32px !important;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 686rpx;
+  height: 100rpx;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32rpx 50rpx 32rpx;
+}
+
+.bottom .pay {
+  font-size: 27rpx;
+  color: #b4282d;
+}
+
+/* .bottom .btn {
+  width: 70px !important;
+  height: 32px !important;
+  line-height: 30px !important;
+} */

@@ -1,0 +1,15 @@
+<!--pages/ucenter/setting/setting.wxml-->
+<view class="wrap"></view>
+<van-cell-group>
+  <van-cell title="消息推送" size="large">
+    <van-switch slot="right-icon" size="24px" checked="{{ checked }}" bind:change="onChange" active-color="#b4282d" />
+  </van-cell>
+  <van-cell title="清除缓存" bind:click="clearStorage" size="large" is-link/>
+  <van-cell title="关于我们" bind:click="about" size="large" is-link/>
+  <button open-type="share" hover-class="none" class="wxbtn">
+    <van-cell title="分享小程序" title-class="title" size="large" is-link/>
+  </button>
+</van-cell-group>
+
+<van-toast id="van-toast" />
+<van-dialog confirm-button-color="#b4282d" id="van-dialog" />

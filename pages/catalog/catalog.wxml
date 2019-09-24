@@ -1,0 +1,25 @@
+<!--pages/catalog/catalog.wxml-->
+<view class="container">
+  <view class="catalog">
+    <scroll-view class="nav" scroll-y="true">
+      <view class="wrap" wx:for="{{category}}" data-value="{{item}}" bindtap="switchCategory" wx:key="{{item.id}}">
+        <view class="item {{ currentCategory.id == item.id ? 'active' : ''}}">{{item.title}}</view>
+      </view>
+    </scroll-view>
+
+    <scroll-view class="category" scroll-y="true">
+      <view class="banner">
+        <image class="image" src="{{currentCategory.picUrl}}" bindtap="handleClickBigCover"></image>
+      </view>
+      <view wx:for="{{currentCategory.children}}" data-value="{{item}}" wx:key="{{item.id}}" bindtap="handleClick">
+        <view wx:if="{{item.title}}" class="header">{{item.title}}</view>
+        <view class="item-wrap">
+          <view class="item {{(index+1) % 3 == 0 ? 'last' : ''}}" wx:for="{{item.children}}" wx:for-item="iitem" wx:key="{{iitem.id}}">
+            <image class="icon" src="{{iitem.picUrl}}"></image>
+            <text class="txt">{{iitem.title}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

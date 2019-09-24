@@ -1,0 +1,102 @@
+/* pages/catalog/catalog.wxss */
+
+page {
+  background: #fff !important;
+}
+
+.catalog {
+  display: flex;
+  height: 100%;
+}
+
+.catalog .nav {
+  width: 162rpx;
+  margin-top: 12rpx;
+}
+
+.catalog .nav .wrap {
+  display: flex;
+  flex-direction: row;
+  height: 90rpx;
+  align-items: center;
+}
+
+.catalog .nav .item {
+  text-align: center;
+  line-height: 50rpx;
+  width: 162rpx;
+  color: #666;
+  font-size: 28rpx;
+  border-left: 6rpx solid #fff;
+}
+
+.catalog .nav .item.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ab2b2b;
+  font-size: 32rpx;
+  border-left: 6rpx solid #ab2b2b;
+}
+
+.catalog .category {
+  border-left: 0.8px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx 30rpx 0 30rpx;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.banner .image {
+  height: 200rpx;
+  width: 100%;
+}
+
+.catalog .header {
+  padding-bottom: 10rpx;
+  margin-bottom: 15rpx;
+  text-align: left;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 1rpx solid #d9d9d9;
+  font-size: 26rpx;
+}
+
+.category .item-wrap {
+  display: flex;
+  flex-wrap:wrap;
+  margin-bottom: 20rpx;
+}
+
+.category .item {
+  display: block;
+  height: 216rpx;
+  width: 144rpx;
+  margin-right: 47rpx;
+}
+
+.category .item.last {
+  margin-right: 0;
+}
+
+.category .item .icon {
+  height: 144rpx;
+  width: 144rpx;
+}
+
+.category .item .txt {
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+  height: 72rpx;
+  width: 144rpx;
+  overflow:hidden;
+}

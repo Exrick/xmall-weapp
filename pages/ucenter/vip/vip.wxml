@@ -1,0 +1,101 @@
+<!--pages/ucenter/vip/vip.wxml-->
+
+<view class="privilegeWrap">
+  <view class="title">
+    <span>开通超级会员</span>
+    <image src="/assets/vip.png" class="img"></image>
+    <span>专享9大权益</span>
+  </view>
+  <view class="m-privilegeList">
+    <view class="m-privilegeItem special">
+      <van-icon name="free-postage" color="#E6D4B1" size="38px" />
+      <view class="desc">36张/年</view>
+      <view class="name">每月免邮券</view>
+    </view>
+    <view class="m-privilegeItem special">
+      <van-icon name="label" color="#E6D4B1" size="36px" />
+      <view class="desc">95折起</view>
+      <view class="name">超级会员价</view>
+    </view>
+    <view class="m-privilegeItem special">
+      <van-icon name="bag-o" color="#E6D4B1" size="38px" />
+      <view class="desc">每日低价</view>
+      <view class="name">超级闪购</view>
+    </view>
+    <view class="m-privilegeItem special">
+      <van-icon name="point-gift" color="#E6D4B1" size="38px" />
+      <view class="desc">每月1件</view>
+      <view class="name">免费试用</view>
+    </view>
+    <view class="m-privilegeItem special">
+      <van-icon name="coupon" color="#E6D4B1" size="38px" />
+      <view class="desc">任选100元</view>
+      <view class="name">每月专享券</view>
+    </view>
+    <view class="m-privilegeItem special">
+      <van-icon name="discount" color="#E6D4B1" size="38px" />
+      <view class="desc">返6%</view>
+      <view class="name">超级回馈金</view>
+    </view>
+    <view class="m-privilegeItem special">
+      <van-icon name="refund-o" color="#E6D4B1" size="38px" />
+      <view class="desc">双倍</view>
+      <view class="name">购物返积分</view>
+    </view>
+    <view class="m-privilegeItem special">
+      <van-icon name="diamond" color="#E6D4B1" size="38px" />
+      <view class="desc">24小时</view>
+      <view class="name">超级管家</view>
+    </view>
+    <view class="m-privilegeItem special">
+      <van-icon name="invition" color="#E6D4B1" size="38px" />
+      <view class="desc">可邀3人</view>
+      <view class="name">亲友邀请卡</view>
+    </view>
+  </view>
+</view>
+<view class="wrap">
+  <view class="m-calculatorLine">
+    <van-icon name="cashier-o" class="icon1" />
+    <span class="txt">开通超级会员预计年均可省</span>
+    <span class="money">
+      <span>¥</span>
+      <span>2627</span>
+    </span>
+    <van-icon name="arrow" class="icon2" />
+  </view>
+  <view class="btnList">
+    <view class="btnWraper" bindtap="pay">
+      <view class="line1">
+        <span>立即开通</span>
+        <span class="retailPrice">
+          <span class="small">¥</span>
+          <span>149</span>
+        </span>
+        <span>/年</span>
+      </view>
+      <view class="line2">季卡仅售59元</view>
+    </view>
+    <view class="btnWraper default" bindtap="tryVip">
+      <view class="line1">先试用30天</view>
+    </view>
+  </view>
+</view>
+
+<view class="banner-wrap">
+  <swiper class="banner" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{picList}}" wx:key="{{item.id}}">
+      <image src="{{item.picUrl}}" background-size="cover" mode="aspectFit" data-value="{{item}}" bindtap="handleClick"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="imgs">
+  <image src="https://yanxuan.nosdn.127.net/6a55b58d89b9f252dd53d2adef765e89.jpg" class="img1"></image>
+  <view class="two">
+    <image src="https://yanxuan.nosdn.127.net/a219c46db83184c09cf8edeaf79c708f.jpg" class="img2"></image>
+    <image src="https://yanxuan.nosdn.127.net/83e2b77e4b216c0115922e53ce627ef3.jpg" class="img3"></image>
+  </view>
+</view>
+
+<van-dialog confirm-button-color="#b4282d" id="van-dialog" />

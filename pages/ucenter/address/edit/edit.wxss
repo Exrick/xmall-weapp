@@ -1,0 +1,53 @@
+/* pages/address/edit/edit.wxss */
+
+page {
+  background: #fff;
+}
+
+.save {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  background: #b4282d;
+}
+
+.save.active {
+  background: #981d22;
+}
+
+.default {
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32rpx;
+}
+
+.checked {
+  color: #333;
+  font-size: 26rpx;
+}
+
+.import {
+  color: #07c160;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+}
+
+.import .image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.icon {
+  margin-top: 7rpx;
+}

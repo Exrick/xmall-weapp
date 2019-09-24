@@ -1,0 +1,21 @@
+<!--pages/ucenter/express/express.wxml-->
+<view class="delivery">
+  <image src="/assets/deliveryIcon.png" class="icon"></image>
+  <view class="wrap">
+    <view class="companyname">
+      <span class="key">物流公司：</span>
+      <span class="value">{{express.company}}</span>
+    </view>
+    <view class="expno">
+      <span class="key">物流单号：</span>
+      <span class="value">{{express.expno}}</span>
+    </view>
+  </view>
+</view>
+
+<view class="detail">
+  <van-steps steps="{{ express.detail }}" active="{{ active }}" direction="vertical" />
+</view>
+
+<!-- 推荐列表 -->
+<recommend></recommend>

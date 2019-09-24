@@ -1,0 +1,95 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/catalog/catalog",
+    "pages/cart/cart",
+    "pages/checkout/checkout",
+    "pages/search/search",
+    "pages/promotion/promotion",
+    "pages/category/category",
+    "pages/product/product",
+    "pages/comment/comment",
+    "pages/auth/tologin/tologin",
+    "pages/auth/mobile-login/mobile-login",
+    "pages/auth/pass-login/pass-login",
+    "pages/ucenter/index/index",
+    "pages/ucenter/order/order",
+    "pages/ucenter/order-detail/order-detail",
+    "pages/ucenter/to-comment/to-comment",
+    "pages/ucenter/coupon/coupon",
+    "pages/ucenter/red/red",
+    "pages/ucenter/address/index/index",
+    "pages/ucenter/address/edit/edit",
+    "pages/pay-result/pay-result",
+    "pages/ucenter/express/express",
+    "pages/ucenter/vip/vip",
+    "pages/ucenter/setting/setting"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1d1d1d",
+    "navigationBarTitleText": "XMall",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f4f4f4"
+  },
+  "tabBar": {
+    "color": "#9a9a9a",
+    "selectedColor": "#666",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/index.png",
+        "selectedIconPath": "assets/indexSelected.png"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "text": "分类",
+        "iconPath": "assets/all.png",
+        "selectedIconPath": "assets/allSelected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "assets/cart.png",
+        "selectedIconPath": "assets/cartSelected.png"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "text": "我的",
+        "iconPath": "assets/me.png",
+        "selectedIconPath": "assets/meSelected.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "lib/vant-weapp/button/index",
+    "van-dialog": "lib/vant-weapp/dialog/index",
+    "van-field": "lib/vant-weapp/field/index",
+    "van-tab": "lib/vant-weapp/tab/index",
+    "van-tabs": "lib/vant-weapp/tabs/index",
+    "van-loading": "lib/vant-weapp/loading/index",
+    "van-checkbox": "lib/vant-weapp/checkbox/index",
+    "van-icon": "lib/vant-weapp/icon/index",
+    "van-search": "lib/vant-weapp/search/index",
+    "van-toast": "lib/vant-weapp/toast/index",
+    "van-tag": "lib/vant-weapp/tag/index",
+    "van-cell": "lib/vant-weapp/cell/index",
+    "van-cell-group": "lib/vant-weapp/cell-group/index",
+    "van-popup": "lib/vant-weapp/popup/index",
+    "van-area": "lib/vant-weapp/area/index",
+    "van-steps": "lib/vant-weapp/steps/index",
+    "van-switch": "lib/vant-weapp/switch/index",
+    "wux-toptips": "lib/wux-weapp/toptips/index",
+    "wux-filterbar": "lib/wux-weapp/filterbar/index",
+    "wux-upload": "lib/wux-weapp/upload/index",
+    "i-icon": "lib/iview-weapp/icon/index",
+    "i-badge": "lib/iview-weapp/badge/index",
+    "i-input-number": "lib/iview-weapp/input-number/index",
+    "i-swipeout": "lib/iview-weapp/swipeout/index",
+    "i-avatar": "lib/iview-weapp/avatar/index",
+    "i-rate": "lib/iview-weapp/rate/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

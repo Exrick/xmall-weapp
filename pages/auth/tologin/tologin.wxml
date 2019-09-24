@@ -1,0 +1,7 @@
+<!--pages/auth/tologin/tologin.wxml-->
+<view class="form-box">
+  <image src="/assets/m.png" class="logo"></image>
+  <van-button open-type="getUserInfo" custom-class="login-btn" bind:getuserinfo="wxlogin">微信登录</van-button>
+  <van-button open-type="getUserInfo" custom-class="mlogin-btn" bind:getuserinfo="mobilelogin">手机号登录</van-button>
+</view>
+<van-dialog confirm-button-color="#b4282d" id="van-dialog" />

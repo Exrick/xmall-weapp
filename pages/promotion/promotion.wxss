@@ -1,0 +1,24 @@
+/* pages/promotion/promotion.wxss */
+.filter{
+  width: 750rpx;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.product {
+  height: 100%;
+  background: #fff;
+}
+
+.product-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15rpx 0 40rpx;
+}
+
+.product .item {
+  width: 320rpx;
+  margin-top: 25rpx;
+  margin-right: 25rpx;
+}

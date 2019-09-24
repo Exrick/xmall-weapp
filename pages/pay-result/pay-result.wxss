@@ -1,0 +1,58 @@
+/* pages/pay-result/pay-result.wxss */
+
+.pay-result {
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pay-result .success, .pay-result .error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pay-result .msg {
+  color: #2bab25;
+  font-size: 38rpx;
+  padding-top: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.time {
+  color: #b4282d;
+}
+
+.pay-result .error .msg {
+  color: #b4282d;
+}
+
+.pay-result .error .tips {
+  color: #7f7f7f;
+  margin-bottom: 70rpx;
+}
+
+.pay-result .error .tips .p {
+  font-size: 26rpx;
+  line-height: 42rpx;
+  text-align: center;
+}
+
+.pay-result .success .tips {
+  color: #7f7f7f;
+  margin-bottom: 70rpx;
+}
+
+.pay-result .success .tips .p {
+  font-size: 26rpx;
+  line-height: 42rpx;
+  text-align: center;
+}
+
+.van-button--small {
+  padding: 0 20px !important;
+  line-height: 32px !important;
+  height: 34px !important;
+}

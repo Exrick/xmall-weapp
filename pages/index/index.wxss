@@ -1,0 +1,166 @@
+/**index.wxss**/
+
+.search-bar {
+  position: fixed;
+  top: 0rpx;
+  display: flex;
+  justify-content: center;
+  height: 110rpx;
+  width: 100%;
+  background: #fff;
+  z-index: 100;
+}
+
+.search {
+  width: 700rpx;
+  border-radius: 35rpx;
+  background: #ededed;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.search-logo {
+  width: 27rpx;
+  height: 27rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 6rpx;
+  margin-right: 5rpx;
+}
+
+.banner-wrap {
+  padding-top: 110rpx;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.banner {
+  width: 700rpx;
+  height: 302rpx;
+}
+
+.banner image {
+  width: 100%;
+  height: 315rpx;
+}
+
+.menu {
+  display: flex;
+  height: 175rpx;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.menu .item {
+  flex: 1;
+  display: block;
+  padding: 20rpx 0;
+}
+
+.menu image {
+  display: block;
+  width: 58rpx;
+  height: 58rpx;
+  margin: 0 auto;
+  margin-bottom: 12rpx;
+}
+
+.menu text {
+  display: block;
+  font-size: 22rpx;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1;
+  padding-top: 3rpx;
+  color: #666;
+}
+
+.section {
+  background: #fff;
+  color: #333;
+  margin-top: 20rpx;
+}
+
+.section .h {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+  border-bottom: 1px #ebebeb solid;
+  padding: 0 25rpx;
+}
+
+.section .h.active {
+  background: #ebebeb;
+}
+
+.section .h .txt {
+  color: #666;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.section .h .arrow {
+  width: 16rpx;
+  height: 27rpx;
+}
+
+.hot .hot-wrap {
+  display: flex;
+  height: 400rpx;
+  width: 100%;
+  margin-top: 40rpx;
+  padding: 0 0 30rpx 25rpx;
+}
+
+.hot .item {
+  margin-right: 25rpx;
+}
+
+.layout-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 25rpx 0 0 0;
+}
+
+.layout-image-two {
+  width: 703rpx;
+  height: 266rpx;
+  display: block;
+  margin-bottom: 25rpx;
+}
+
+.pick .pick-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 15rpx 30rpx 40rpx;
+}
+
+.pick-wrap .item {
+  width: 320rpx;
+  margin-top: 25rpx;
+  margin-right: 25rpx;
+}
+
+.more {
+  padding: 30rpx 0 50rpx 0;
+}
+
+.more .title {
+  color: #999;
+  font-size: 25rpx;
+  text-align: center;
+  display: block;
+}
+

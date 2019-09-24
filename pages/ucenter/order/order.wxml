@@ -1,0 +1,64 @@
+<!--pages/ucenter/order/order.wxml-->
+<van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipe-threshold="5" swipeable bind:change="changeTab" class="nav">
+  <van-tab title="全部"></van-tab>
+  <van-tab title="待付款"></van-tab>
+  <van-tab title="待发货"></van-tab>
+  <van-tab title="已发货"></van-tab>
+  <van-tab title="待评价"></van-tab>
+</van-tabs>
+
+<!-- 加载中 -->
+<view wx:if="{{loading}}" class="loading-center">
+  <van-loading type="spinner" />
+</view>
+
+<!-- 无订单 -->
+<view class="no-order" wx:if="{{orderList.length == 0&&!loading}}">
+  <image class="img" src="/assets/noOrder.png"></image>
+  <view class="txt">还没有任何订单呢</view>
+</view>
+
+<!-- 订单列表 -->
+<scroll-view bindscrolltolower="scrollListen" scroll-y enable-flex class="orders" wx:if="{{orderList.length > 0&&!loading}}">
+  <view style="margin-top:108rpx"></view>
+  <!-- 订单 -->
+  <view class="order" wx:for="{{orderList}}" wx:key="{{item.id}}">
+    <view class="header">
+      <view class="order-id">订单编号：{{item.orderSn}}</view>
+      <view wx:if="{{item.orderStatus==1||item.orderStatus==2||item.orderStatus==3}}" class="cancel" data-value="{{item}}" data-index="{{index}}" bindtap="cancelOrder">取消订单</view>
+      <image wx:if="{{item.orderStatus==0||item.orderStatus==4||item.orderStatus==5}}" class="delete" src="/assets/delete.png" data-value="{{item}}" bindtap="deleteOrder"></image>
+    </view>
+
+    <view class="product" wx:for="{{item.productList}}" wx:key="{{product.id}}" wx:for-item="product" data-value="{{item}}" bindtap="toOrderDetail">
+      <image class="img" src="{{product.picUrl}}"></image>
+      <view class="info">
+        <text class="title">{{product.title}}</text>
+        <text class="specDesc">{{product.specDesc}}</text>
+      </view>
+      <view class="status">
+        <text class="package">包裹{{index+1}}</text>
+        <text class="txt" wx:if="{{product.status==0}}">已取消</text>
+        <text class="txt" wx:if="{{product.status==1}}">待付款</text>
+        <text class="txt" wx:if="{{product.status==2}}">待发货</text>
+        <text class="txt" wx:if="{{product.status==3}}">已发货</text>
+        <text class="txt-success" wx:if="{{product.status==4||product.status==5}}">交易成功</text>
+      </view>
+    </view>
+    <view class="foot" wx:if="{{item.orderStatus != 0}}">
+      <view class="money">
+        <text wx:if="{{item.orderStatus==1}}">应付：￥{{item.actualPrice}}</text>
+        <text wx:if="{{item.orderStatus==2||item.orderStatus==3}}">实付：￥{{item.actualPrice}}</text>
+      </view>
+      <view class="btns">
+        <van-button data-value="{{item}}" data-index="{{index}}" wx:if="{{item.orderStatus==1}}" color="#b4282d" size="small" class="btn" bindtap="toPay">去付款
+        </van-button>
+        <van-button data-value="{{item}}" data-index="{{index}}" wx:if="{{item.orderStatus==3}}" plain type="default" size="small" class="btn" bindtap="toExpress">追踪物流</van-button>
+        <van-button data-value="{{item}}" data-index="{{index}}" wx:if="{{item.orderStatus==3}}" plain type="default" size="small" class="btn" bindtap="confirmReceive">确认收货</van-button>
+        <van-button data-value="{{item}}" data-index="{{index}}" wx:if="{{item.orderStatus==0||item.orderStatus==4||item.orderStatus==5}}" plain type="default" size="small" class="btn" bindtap="buyAgain">再次购买</van-button>
+        <van-button data-value="{{item}}" data-index="{{index}}" wx:if="{{item.orderStatus==4}}" plain type="default" size="small" class="btn" bindtap="toComment">立即评价</van-button>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<van-dialog confirm-button-color="#b4282d" id="van-dialog" />

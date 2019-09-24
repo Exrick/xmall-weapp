@@ -1,0 +1,45 @@
+<!--pages/search/search.wxml-->
+<view class="header">
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action shape="round" bind:search="onSearch" bind:cancel="onCancel" bind:clear="onClear" />
+  <wux-filterbar items="{{ filters }}" bind:change="onFilterChange" bind:open="onOpen" wx:if="{{ result.length>0 && searchStatus }}" />
+</view>
+
+<!-- 未搜索时标签 -->
+<view class="no-search" wx:if="{{ !searchStatus }}">
+  <view class="history" wx:if="{{history.length>0}}">
+    <view class="head">
+      <text class="title">历史记录</text>
+      <image class="icon" bindtap="clearHistory" src="/assets/delete.png"></image>
+    </view>
+    <view class="wrap">
+      <view class="item" bindtap="clickTag" data-value="{{item}}" wx:key="{{item}}" wx:for="{{history}}" hover-class="navigator-hover">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="hot">
+    <view class="head">
+      热门搜索
+    </view>
+    <view class="wrap">
+      <view class="item {{item.isTop ? 'active' : ''}}" hover-class="navigator-hover" bindtap="clickTag" data-value="{{item.title}}" wx:for="{{hot}}" wx:key="{{item.title}}">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 搜索结果 -->
+<scroll-view bindscrolltolower="scrollListen" scroll-y enable-flex class="result" wx:if="{{ result.length>0 && searchStatus }}">
+  <view style="height:208rpx;width:750rpx"></view>
+  <view class="item" wx:for="{{result}}" wx:for-item="item" wx:key="{{item.id}}" data-value="{{item}}" bindtap="handleClick">
+    <product-big data="{{item}}" border="false"></product-big>
+  </view>
+</scroll-view>
+
+<view class="empty-wrap" wx:if="{{ result.length==0 && searchStatus}}">
+  <view class="empty">
+    <image class="icon" src="/assets/noSearch.png"></image>
+    <text class="text">您寻找的商品还未上架</text>
+  </view>
+</view>
+
+
+<van-toast id="van-toast" />

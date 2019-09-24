@@ -1,0 +1,46 @@
+/* component/comment/comment.wxss */
+.comment .header {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+
+.comment .name {
+  font-size: 26rpx;
+  color: #333;
+  margin: 0 15rpx;
+}
+
+.comment .rate {
+  margin-bottom: 5rpx;
+}
+
+.comment .time {
+  margin-right: 8rpx;
+}
+
+.comment .spec {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 15rpx;
+}
+
+.comment .content {
+  color: #333;
+  font-size: 27rpx;
+  margin-bottom: 15rpx;
+}
+
+.comment .pics .item {
+  height: 150rpx;
+  width: 150rpx;
+  margin-right: 28rpx;
+  margin-top: 10rpx;
+  border-radius: 5rpx;
+}
+
+.comment .add .title {
+  font-size: 27rpx;
+  color: #b4282d;
+  margin: 10rpx 0;
+}

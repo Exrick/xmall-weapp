@@ -1,0 +1,25 @@
+<!--component/comment/comment.wxml-->
+<view class="comment">
+  <view class="header">
+    <i-avatar src="{{data.avatar}}" size="default"></i-avatar>
+    <text class="name">{{data.nickname}}</text>
+    <i-rate class="rate" value="{{data.rate}}"></i-rate>
+  </view>
+  <view class="spec">
+    <text class="time">{{data.time}}</text>{{data.spec}}
+  </view>
+  <view class="content">{{data.content}}</view>
+  <view class="pics" wx:if="{{data.pics.length > 0}}">
+    <image class="item" wx:for="{{data.pics}}" wx:key="{{index}}" src="{{item}}" data-index="{{index}}" bindtap="previewImage" mode="aspectFill"></image>
+  </view>
+  <view class="add" wx:if="{{data.addComment}}">
+    <view class="title">追评</view>
+    <view class="spec">
+      {{data.addComment.time}}
+    </view>
+    <view class="content">{{data.addComment.content}}</view>
+    <view class="pics" wx:if="{{data.addComment.pics.length > 0}}">
+      <image class="item" wx:for="{{data.addComment.pics}}" wx:key="{{index}}" src="{{item}}" data-index="{{index}}" bindtap="previewAddImage" mode="aspectFill"></image>
+    </view>
+  </view>
+</view>

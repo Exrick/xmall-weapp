@@ -1,0 +1,186 @@
+/* pages/ucenter/index/index.wxss */
+
+.ucenter {
+  padding-bottom: 30rpx;
+}
+
+.profile-info {
+  height: 280rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 32rpx;
+  background: #333;
+  width: 718rpx;
+}
+
+.profile-info .avatar {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 50%;
+}
+
+.profile-info .info {
+  flex: 1;
+  height: 85rpx;
+  padding-left: 31.25rpx;
+}
+
+.profile-info .name {
+  display: block;
+  color: #fff;
+  font-size: 37.5rpx;
+}
+
+.profile-info .level {
+  display: block;
+  color: #7f7f7f;
+  font-size: 30rpx;
+}
+
+.vip {
+  width: 200rpx;
+  height: 90rpx;
+  background: #c4a66d;
+  border-top-left-radius: 45rpx;
+  border-bottom-left-radius: 45rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vip .img {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.vip .word {
+  display: flex;
+  flex-direction: column;
+  color: #444;
+  font-size: 25rpx;
+}
+
+.vip .word .line2 {
+  display: inline-block;
+  color: #444;
+  font-size: 21rpx;
+}
+
+.order-wrap {
+  margin: 20rpx 0;
+  height: 240rpx;
+  background: #fff;
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+  padding: 0 30rpx;
+}
+
+.order-header .right {
+  display: flex;
+  align-items: center;
+}
+
+.order-header .txt {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.order-header .all {
+  color: #666;
+  font-size: 25rpx;
+  margin-right: 10rpx;
+}
+
+.order-header .arrow {
+  width: 13rpx;
+  height: 25rpx;
+}
+
+.order-icon {
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.order-icon .icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 120rpx;
+}
+
+.icon-wrap .icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+.icon-wrap .txt {
+  color: #666;
+  font-size: 25rpx;
+}
+
+.icon-wrap .num {
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.service-wrap {
+  margin: 20rpx 0;
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+  height: 100rpx;
+  text-align: center;
+  background: #fff;
+  color: #666;
+  font-size: 14px;
+}
+
+.wxbtn {
+  width: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: none;
+  font-size: none;
+  text-align: none;
+  text-decoration: none;
+  line-height: none;
+  border: none !important;
+  border-radius: none;
+  overflow: hidden;
+  color: none;
+  background-color: #fff;
+}
+
+.wxbtn::after {
+  border: none;
+}
+
+.wx {
+  margin-top: 12rpx;
+  margin-bottom: 0rpx !important;
+}

@@ -1,0 +1,14 @@
+<!--pages/category/category.wxml-->
+<van-tabs color="#b4282d" active="{{active}}" tab-class="tab" class="nav" swipeable bind:change="changeTab">
+  <van-tab wx:for="{{category.children}}" wx:key="{{item.id}}" title="{{item.title}}"></van-tab>
+</van-tabs>
+
+<scroll-view bindscrolltolower="scrollListen" scroll-y enable-flex class="product">
+  <view style="padding-top:108rpx;background:#f4f4f4"></view>
+  <view class="desc">{{description}}</view>
+  <view class="product-wrap">
+    <view class="item" wx:for="{{product}}" wx:for-item="item" wx:key="{{item.id}}" data-value="{{item}}" bindtap="handleClick">
+      <product-big data="{{item}}" border="false"></product-big>
+    </view>
+  </view>
+</scroll-view>

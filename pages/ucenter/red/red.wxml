@@ -1,0 +1,18 @@
+<!--pages/ucenter/red/red.wxml-->
+<view class="header">
+  <van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipeable bind:change="changeTab">
+    <van-tab title="未使用"></van-tab>
+    <van-tab title="已使用"></van-tab>
+    <van-tab title="已失效"></van-tab>
+  </van-tabs>
+</view>
+
+<scroll-view bindscrolltolower="scrollListen" scroll-y class="red-wrap" enable-flex wx:if="{{redList.length>0}}">
+  <red data="{{item}}" wx:for="{{redList}}" wx:key="{{item.id}}" data-value="{{item}}" bindtap="choose" class="item">
+  </red>
+</scroll-view>
+
+<view class="empty" wx:if="{{redList.length==0}}">
+  <image src="/assets/noRed.png" class="img"></image>
+  <view class="txt">暂无红包</view>
+</view>

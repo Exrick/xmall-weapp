@@ -1,0 +1,8 @@
+<!--component/product-big/product-big.wxml-->
+<view class="product-big">
+  <image class="{{border=='true' ? 'img' : 'img-noborder'}}" src="{{data.picUrl}}" background-size="cover" mode="aspectFit" lazy-load="true"></image>
+  <van-tag wx:if="{{data.tag}}" round color="#ffe7e5" text-color="#cc3e39" class="tag">{{data.tag}}</van-tag>
+  <text class="name">{{data.title}}</text>
+  <text class="description">{{data.description}}</text>
+  <text class="price">￥{{data.price}}</text>
+</view>

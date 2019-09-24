@@ -1,0 +1,40 @@
+/* pages/category/category.wxss */
+.nav {
+  position: fixed;
+  width: 750rpx;
+  top: 0;
+  z-index: 10;
+}
+
+.van-tab {
+  flex-basis: 30% !important;
+}
+
+.product {
+  height: 100%;
+  background: #fff;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.product-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 15rpx 30rpx 40rpx;
+}
+
+.product .item {
+  width: 320rpx;
+  margin-top: 25rpx;
+  margin-right: 25rpx;
+}
+
+
+

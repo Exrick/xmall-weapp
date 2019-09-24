@@ -1,0 +1,27 @@
+/* pages/ucenter/setting/setting.wxss */
+.wrap {
+  margin-top: 20rpx;
+}
+
+.wxbtn {
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: none;
+  font-size: none;
+  text-align: none;
+  text-decoration: none;
+  line-height: none;
+  border: none !important;
+  border-radius: none;
+  overflow: hidden;
+  color: none;
+  background-color: #fff;
+}
+
+.wxbtn::after {
+  border: none;
+}
+
+.title {
+  display: flex;
+}

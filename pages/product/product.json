@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "product-hot": "/component/product-hot/product-hot",
+    "coupon": "/component/coupon/coupon",
+    "comment": "/component/comment/comment"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "product-big": "/component/product-big/product-big"
+  }
+}
