@@ -13,7 +13,7 @@ https://www.kancloud.cn/exrick/xboot/1228259
 - Wux Weapp：UI组件库
 - WxParse：富文本解析组件，支持HTML和markdown
 ### 设计参考
-> 大部分icon素材并未直接COPY，均已替换
+> 所有样式及icon素材并未直接COPY
 - 锤子商城H5
 - 网易严选H5
 - 网易严选小程序
