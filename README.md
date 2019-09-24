@@ -1,6 +1,5 @@
 # xmall-weapp
 > 作者主要为后端开发 页面样式等不合理处欢迎指出！
-终于开源！XMall商城微信小程序前端 共计20多个页面 页面联动 精美细节
 
 ![WX20190924-234416@2x.png](https://i.loli.net/2019/09/24/MhuSI4KAVRdEaOW.png)
 
