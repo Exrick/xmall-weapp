@@ -5,11 +5,11 @@
 
 - 作者亲自制作 [点我或图片观看](https://www.bilibili.com/video/av70226175)
 
-[![WX20190924-234416@2x.png](https://i.loli.net/2019/10/06/wNgVsouaJfHb7tM.png)](https://www.bilibili.com/video/av70226175)
+[![WX20190924-234416@2x.png](https://s2.ax1x.com/2019/10/06/ucEsBD.md.png)](https://www.bilibili.com/video/av70226175)
 
 ### 微信扫一扫预览
 
-![gh_e444d4306803_258.jpg](https://i.loli.net/2019/10/06/yrLlojtMiqmJHNe.jpg)
+![gh_e444d4306803_258.jpg](https://s2.ax1x.com/2019/10/06/ucEW9I.jpg)
 
 ![WX20190924-234416@2x.png](https://i.loli.net/2019/09/24/MhuSI4KAVRdEaOW.png)
 
