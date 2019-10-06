@@ -13,8 +13,12 @@
 
 ![WX20190924-234416@2x.png](https://i.loli.net/2019/09/24/MhuSI4KAVRdEaOW.png)
 
-### 开发文档
-https://www.kancloud.cn/exrick/xboot/1228259
+### XMall小程序开发文档
+- 开发文档更新完善中：https://www.kancloud.cn/exrick/xboot/1228259
+
+### 后台预计将在作者开发的 [XBoot前后端分离开发平台](http://xboot.exrick.cn) 中实现
+- https://github.com/Exrick/x-boot
+
 ### 引入的第三方组件库或依赖
 > 生产环境下可将未使用的组件代码删除减少代码包体积大小，文件位置位于lib文件夹下
 
@@ -32,3 +36,4 @@ https://www.kancloud.cn/exrick/xboot/1228259
 ### 开源协议
 - MIT 
 - 商用请自行修改UI避免样式侵权
+### [捐赠](http://xpay.exrick.cn/pay)
