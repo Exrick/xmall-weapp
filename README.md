@@ -1,13 +1,15 @@
 # xmall-weapp
 > 作者主要为后端开发 页面样式等不合理处欢迎指出！
 
-### [宣传视频](https://www.bilibili.com/video/av70226175)
+### [小程序宣传视频](https://www.bilibili.com/video/av70226175)
 
 - 作者亲自制作 [点我或图片观看](https://www.bilibili.com/video/av70226175)
 
 [![WX20190924-234416@2x.png](https://s2.ax1x.com/2019/10/06/ucEsBD.md.png)](https://www.bilibili.com/video/av70226175)
 
 ### 微信扫一扫预览
+
+- 备用小程序二维码图片链接：https://i.loli.net/2019/10/06/yrtuPTL9DXQUvd2.jpg
 
 ![gh_e444d4306803_258.jpg](https://s2.ax1x.com/2019/10/06/ucEW9I.jpg)
 
