@@ -9,7 +9,7 @@
 
 ### 微信扫一扫预览
 
-- 备用小程序二维码图片链接：https://i.loli.net/2019/10/06/yrtuPTL9DXQUvd2.jpg
+- 备用小程序二维码图片链接：https://ooo.0o0.ooo/2019/10/06/yrtuPTL9DXQUvd2.jpg
 
 ![gh_e444d4306803_258.jpg](https://s2.ax1x.com/2019/10/06/ucEW9I.jpg)
 
